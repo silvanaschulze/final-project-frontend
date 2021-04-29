@@ -3,12 +3,17 @@
 }
 
 .svg-map__location_selected {
-  fill: blue;
+  fill: orange;
   cursor: pointer;
   outline: none !important;
 }
 
 .svg-map__location_default {
-  fill: #a1d99b;
+  fill: teal;
   cursor: pointer;
+  outline: none !important;
+}
+
+.svg-map__location_default:hover {
+  fill: lightblue;
 }

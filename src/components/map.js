@@ -8,7 +8,6 @@ import 'react-svg-map/lib/index.css';
 const Maps = () => {
   const [loading, setLoading] = useState(false);
   const [userLocation, setUserLocation] = useState();
-  const [selectedRegion, setSelectedRegion] = useState('');
 
   useEffect(() => {
     const getUserLocation = async () => {
@@ -70,18 +69,18 @@ const Maps = () => {
     getUserLocation();
   }, []);
 
-  const selectLocation = e => {
-    setSelectedRegion(e.target.getAttribute('name'));
-    highlightLocation(Germany.locations);
+  const selectLocation = ({ target }) => {
+    setUserLocation({ ...userLocation, region: target.getAttribute('name'), id: target.getAttribute('id') });
   };
 
-  const highlightLocation = p => (p.id === userLocation.id ? 'svg-map__location_selected' : 'svg-map__location');
+  const highlightLocation = p =>
+    p.id === userLocation.id ? 'svg-map__location_selected' : 'svg-map__location_default';
 
   return (
     <div className='Maps'>
       {!loading && userLocation ? (
         <div>
-          <p>{selectedRegion ? selectedRegion : userLocation.region}</p>
+          <p>{userLocation && userLocation.region}</p>
           <SVGMap
             map={Germany}
             className='svg-map-custom'
