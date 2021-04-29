@@ -1,5 +1,14 @@
+.svg-map-custom {
+  height: 300px;
+}
 
+.svg-map__location_selected {
+  fill: blue;
+  cursor: pointer;
+  outline: none !important;
+}
 
-.svg-map-custom{
-    height: 300px;
+.svg-map__location_default {
+  fill: #a1d99b;
+  cursor: pointer;
 }
