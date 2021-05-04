@@ -1,19 +1,25 @@
 
 import "./styles.css"
-import Maps from "./components/map"
-import Cards from "./components/cards"
 import Navbar from "./components/navbar";
+import Home from "./components/home"
+import { Switch, Route} from "react-router-dom"
+
 
 const App = () => {
-  return(
-    <div className= "App">
-      <Cards />
-      <Maps />
-      <Navbar />
-    </div>
-  )
-}
 
+  return (
+    <div>
+    <Navbar />
+  <Switch>
+    
+    <Route path="/"> 
+      <Home />
+    </Route>
   
+  </Switch>
+  </div>)
+  }  
+  
+
 
 export default App;

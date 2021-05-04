@@ -1,14 +1,17 @@
 import React from "react"
+import Navbar from 'react-bootstrap/Navbar'
+import Button from 'react-bootstrap/Button'
 
-const Navbar = () => {
+const Navigationbar = () => {
     return(
-      <div className= "Navbar">
-      <h1> Hello Silvana </h1>
-      </div>
+<div>navbar
+
+</div>
+  
     )
   }
 
 
 
 
-export default Navbar
+export default Navigationbar
