@@ -20,6 +20,7 @@ const Maps = () => {
           setUserLocation({ ...location, id: 'bw' });
           break;
         case 'Berlin':
+        case 'Land Berlin':
           setUserLocation({ ...location, id: 'be' });
           break;
         case 'Brandenburg':

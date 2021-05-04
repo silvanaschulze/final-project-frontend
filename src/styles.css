@@ -17,3 +17,7 @@
 .svg-map__location_default:hover {
   fill: lightblue;
 }
+
+.Home {
+  display: flex;
+}
